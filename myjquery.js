@@ -1,11 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	//validate first name field
 
 	function fName() {
 		var fname = $('#first_name').val();
 		if (fname === '') {
 			$('#alertFirst').text('This field cannot be empty');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alertFirst').text('');
 			}, 7000);
 			return false;
@@ -13,7 +13,7 @@ $(document).ready(function() {
 		return true;
 	}
 
-	$('#first_name').blur(function() {
+	$('#first_name').blur(function () {
 		fName();
 	});
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 		if (lname === '') {
 			$('#alertLast').text('This field cannot be empty');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alertLast').text('');
 			}, 7000);
 			return false;
@@ -32,7 +32,7 @@ $(document).ready(function() {
 		return true;
 	}
 
-	$('#last_name').blur(function() {
+	$('#last_name').blur(function () {
 		lName();
 	});
 
@@ -43,20 +43,20 @@ $(document).ready(function() {
 
 		if (p_no === '') {
 			$('#alertPhone').text('this field cannot be empty');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alertPhone').text('');
 			}, 7000);
 			return false;
 		} else if (isNaN(p_no)) {
 			$('#alertPhone').text('please enter digits only');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alertPhone').text('');
 			}, 7000);
 
 			return false;
 		} else if (p_no.length > 10 || p_no.length < 10) {
 			$('#alertPhone').text('please enter 10 digits only');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alertPhone').text('');
 			}, 7000);
 			return false;
@@ -64,7 +64,7 @@ $(document).ready(function() {
 		return true;
 	}
 
-	$('#phone_no').blur(function() {
+	$('#phone_no').blur(function () {
 		pNumber();
 	});
 
@@ -75,20 +75,20 @@ $(document).ready(function() {
 
 		if (o_no === '') {
 			$('#alert_officePhone').text('This field cannot be empty');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_officePhone').text('');
 			}, 7000);
 			return false;
 		} else if (isNaN(o_no)) {
 			$('#alert_officePhone').text('please enter digits only');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_officePhone').text('');
 			}, 7000);
 
 			return false;
 		} else if (o_no.length > 10 || o_no.length < 10) {
 			$('#alert_officePhone').text('please enter 10 digits only');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_officePhone').text('');
 			}, 7000);
 
@@ -97,7 +97,7 @@ $(document).ready(function() {
 		return true;
 	}
 
-	$('#office_no').blur(function() {
+	$('#office_no').blur(function () {
 		oNumber();
 	});
 
@@ -109,13 +109,13 @@ $(document).ready(function() {
 
 		if (u_email === '') {
 			$('#alert_email').text('this field cannot be empty');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_email').text('');
 			}, 7000);
 			return false;
 		} else if (!u_email.match(pattern)) {
 			$('#alert_email').text('please enter valid email address');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_email').text('');
 			}, 7000);
 			return false;
@@ -123,7 +123,7 @@ $(document).ready(function() {
 		return true;
 	}
 
-	$('#user_email').blur(function() {
+	$('#user_email').blur(function () {
 		uEmail();
 	});
 
@@ -136,13 +136,13 @@ $(document).ready(function() {
 
 		if (u_pass == '') {
 			$('#alert_pass').text('this field cannot be empty');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_pass').text('');
 			}, 7000);
 			return false;
 		} else if (pass_len < 8 || pass_len > 15 || !u_pass.match(pass_pattern)) {
 			$('#alert_pass').text('please enter password between 8-15 alphanumeric characters');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_pass').text('');
 			}, 7000);
 			return false;
@@ -150,7 +150,7 @@ $(document).ready(function() {
 		return true;
 	}
 
-	$('#user_pass').blur(function() {
+	$('#user_pass').blur(function () {
 		uPassword();
 	});
 
@@ -161,13 +161,13 @@ $(document).ready(function() {
 		var u_pass = $('#user_pass').val();
 		if (!(u_conf_pass == u_pass)) {
 			$('#alert_conf_pass').text("Password did'nt matched ");
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_conf_pass').text('');
 			}, 7000);
 			return false;
 		} else if (u_conf_pass === '') {
 			$('#alert_conf_pass').text('This field cannot be empty ');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_conf_pass').text('');
 			}, 7000);
 			return false;
@@ -176,7 +176,7 @@ $(document).ready(function() {
 		return true;
 	}
 
-	$('#user_conf').blur(function() {
+	$('#user_conf').blur(function () {
 		uConfPassword();
 	});
 
@@ -199,7 +199,7 @@ $(document).ready(function() {
 
 		if (inputMonth == 'month' || inputYear == 'year' || inputDay == 'day') {
 			$('#alert_birth').text('please enter valid date,  year,  month');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_birth').text('');
 			}, 7000);
 			return false;
@@ -209,7 +209,7 @@ $(document).ready(function() {
 		}
 	}
 
-	$('#year').blur(function() {
+	$('#year').blur(function () {
 		uAge();
 	});
 
@@ -220,14 +220,14 @@ $(document).ready(function() {
 
 		if (about == '') {
 			$('#alert_about').text('This field is mandatory ');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_about').text('');
 			}, 7000);
 			return false;
 		}
 		return true;
 	}
-	$('#about_us').blur(function() {
+	$('#about_us').blur(function () {
 		uAbout();
 	});
 
@@ -236,7 +236,7 @@ $(document).ready(function() {
 	function validateRadio() {
 		if ($('input[type=radio][name=radio]:checked').length == 0) {
 			$('#alert_gender').text('Please select your gender');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_gender').text('');
 			}, 7000);
 			return false;
@@ -247,9 +247,9 @@ $(document).ready(function() {
 	// function to validate interest checkboxes
 
 	function validateCheck() {
-		if ($("input[name*='check']:checked").length <= 0) {
+		if ($('input[type=checkbox]:checked').length <= 0) {
 			$('#alert_check').text('Please select atleast one interest ');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('#alert_check').text('');
 			}, 7000);
 			return false;
@@ -260,7 +260,7 @@ $(document).ready(function() {
 
 	// validate whole form after clicking submit button
 
-	$('#proceed_next_step').click(function() {
+	$('#proceed_next_step').click(function () {
 		var first = fName();
 		var last = lName();
 		var phone_value = pNumber();
@@ -287,7 +287,7 @@ $(document).ready(function() {
 			check_checkBox == true
 		) {
 			alert('form submitted successfully');
-			// window.open('http://stackoverflow.com', '_blank');
+			window.location.reload();
 		} else {
 			alert('please fill all the details before submitting form');
 		}
